@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/highnoon-gaming/static/css/main.aefacb74.chunk.css",
-    "main.js": "/highnoon-gaming/static/js/main.c99f5df1.chunk.js",
-    "main.js.map": "/highnoon-gaming/static/js/main.c99f5df1.chunk.js.map",
+    "main.js": "/highnoon-gaming/static/js/main.b3cfa797.chunk.js",
+    "main.js.map": "/highnoon-gaming/static/js/main.b3cfa797.chunk.js.map",
     "runtime-main.js": "/highnoon-gaming/static/js/runtime-main.89ccc3fa.js",
     "runtime-main.js.map": "/highnoon-gaming/static/js/runtime-main.89ccc3fa.js.map",
     "static/js/2.5a88e22c.chunk.js": "/highnoon-gaming/static/js/2.5a88e22c.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.89ccc3fa.js",
     "static/js/2.5a88e22c.chunk.js",
     "static/css/main.aefacb74.chunk.css",
-    "static/js/main.c99f5df1.chunk.js"
+    "static/js/main.b3cfa797.chunk.js"
   ]
 }
