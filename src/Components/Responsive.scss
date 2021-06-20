@@ -1,0 +1,299 @@
+// @import './Navbar.scss';
+
+/*sm	640px*/
+@media (max-width: 767px) {
+  // navbar
+  .top-navbar {
+    .logo-section {
+      width: 50%;
+      justify-content: flex-start;
+    }
+  }
+
+  .bottom-navbar {
+    .ul-lg {
+      display: none;
+    }
+  }
+
+  // landing
+  .heroic_video-bg {
+    video {
+      object-fit: contain;
+    }
+    h1 {
+      font-size: 30px;
+      width: 90%;
+      color: $custom-red;
+      display: none;
+    }
+
+    h2 {
+      font-size: 22px;
+      width: 100%;
+      text-align: center;
+      color: $custom-red;
+      display: none;
+    }
+  }
+
+  .event-container {
+    .event-timer {
+      width: 70%;
+
+      section {
+        p {
+          font-size: 15px;
+        }
+      }
+    }
+
+    .event-info {
+      width: 80%;
+
+      &__header {
+        width: 70%;
+        text-align: center;
+      }
+    }
+  }
+
+  .team-container {
+    &__content-box {
+      .team-content {
+        h1 {
+          font-size: 30px;
+          left: 5px;
+        }
+        h2 {
+          font-size: 20px;
+          left: 40px;
+        }
+      }
+    }
+  }
+
+  .slider-container {
+    .active {
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+      }
+    }
+
+    .fa-arrow-circle-right {
+      right: 10px;
+    }
+
+    .fa-arrow-circle-left {
+      left: 10px;
+    }
+  }
+
+  .contact-container {
+    h1 {
+      left: 50%;
+    }
+
+    .content-box {
+      span {
+        width: 100%;
+        text-align: center;
+        font-size: 30px;
+      }
+
+      ul {
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        text-align: center;
+
+        li {
+          margin: 20px 0;
+
+          h2 {
+            font-size: 18px;
+            left: 0;
+          }
+
+          p {
+            font-size: 18px;
+            left: 0;
+          }
+        }
+      }
+    }
+
+    &__right {
+      display: none;
+    }
+  }
+
+  .about-container {
+    left: 0;
+    transform: translateX(0);
+    width: 100%;
+
+    h1 {
+      text-align: center;
+      width: 100%;
+      font-size: 30px;
+    }
+
+    p {
+      text-align: center;
+      width: 100%;
+      font-size: 18px;
+    }
+  }
+
+  .footer-container {
+    &--top {
+      ul {
+        li {
+          margin: 0 15px;
+        }
+      }
+    }
+
+    &--bottom {
+      .sponsors-container {
+        ul {
+          li {
+            font-size: 25px;
+            margin: 0 10px;
+          }
+        }
+      }
+    }
+  }
+}
+
+/*md	768px*/
+@media (min-width: 768px) and (max-width: 1023px) {
+  // landing page
+  .heroic_video-bg {
+    video {
+      object-fit: contain;
+    }
+    h1 {
+      font-size: 40px;
+      width: 70%;
+    }
+
+    h2 {
+      font-size: 22px;
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  .event-container {
+    .event-timer {
+      width: 70%;
+    }
+
+    .event-info {
+      width: 80%;
+    }
+  }
+
+  .slider-container {
+    .active {
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+      }
+    }
+
+    .fa-arrow-circle-right {
+      right: 10px;
+    }
+
+    .fa-arrow-circle-left {
+      left: 10px;
+    }
+  }
+
+  .contact-container {
+    h1 {
+      left: 50%;
+    }
+
+    .content-box {
+      span {
+        width: 100%;
+        text-align: center;
+      }
+
+      ul {
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        text-align: center;
+      }
+    }
+
+    &__right {
+      display: none;
+    }
+  }
+
+  .about-container {
+    p {
+      font-size: 20px;
+      width: 700px;
+    }
+  }
+
+  .footer-container {
+    &--bottom {
+      .sponsors-container {
+        ul {
+          li {
+            font-size: 30px;
+          }
+        }
+      }
+    }
+  }
+
+  // navbar
+  .top-navbar {
+    .logo-section {
+      width: 50%;
+      justify-content: flex-start;
+    }
+  }
+
+  .bottom-navbar {
+    .ul-lg {
+      display: none;
+    }
+
+    .hamburger-menu {
+      display: inline-block;
+    }
+  }
+}
+
+/*lg	1024px*/
+@media (min-width: 1024px) {
+  .hamburger-menu {
+    display: none;
+  }
+
+  .nav-menu {
+    display: none;
+  }
+}
+
+/*xl	1280px*/
+@media (min-width: 1280px) {
+}
+
+/*2xl	1536px*/
+@media (min-width: 1536px) {
+}

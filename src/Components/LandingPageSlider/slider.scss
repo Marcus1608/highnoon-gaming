@@ -1,0 +1,105 @@
+@import '../Navbar.scss';
+
+.slider-container {
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+
+  // images &  active / inactive
+  .active {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+
+    img {
+      position: absolute;
+      height: 50%;
+      width: 50%;
+      object-fit: cover;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  .inactive {
+    display: none;
+  }
+
+  // arrows
+  .fas {
+    cursor: pointer;
+    transition: 300ms all ease-in-out;
+    opacity: 0.8;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  .fa-arrow-circle-left {
+    position: absolute;
+    top: 50%;
+    left: 100px;
+
+    font-size: 80px;
+    color: $custom-red;
+  }
+
+  .fa-arrow-circle-right {
+    position: absolute;
+    top: 50%;
+    right: 100px;
+
+    font-size: 80px;
+    color: $custom-red;
+  }
+
+  //  Nav
+  .all-navigation {
+    position: absolute;
+    bottom: 0;
+    height: 2%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    .nav {
+      cursor: pointer;
+      height: 5px;
+      width: 500px;
+      background-color: rgba(255, 255, 255, 0.4);
+      z-index: 999;
+      margin: 0 3px;
+      transition: 300ms all ease-in-out;
+
+      &:hover {
+        background-color: $custom-red;
+      }
+    }
+
+    .active-nav {
+      background-color: $custom-red;
+    }
+
+    .title {
+      position: absolute;
+      top: -20px;
+      transition: 300ms all ease-in-out;
+      color: rgba(255, 255, 255, 0.4);
+
+      &:hover {
+        color: rgba(255, 255, 255, 1);
+      }
+    }
+
+    .active-title {
+      position: absolute;
+      top: -20px;
+      color: rgba(255, 255, 255, 1);
+    }
+  }
+}
+
+@import '../Responsive.scss';

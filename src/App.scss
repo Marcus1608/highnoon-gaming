@@ -1,0 +1,48 @@
+body,
+html,
+h1,
+h2,
+h3,
+ul,
+p,
+a {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: white;
+  letter-spacing: 1px;
+  text-decoration: none;
+  font-family: 'Revalia', cursive;
+}
+
+body {
+  height: 100vh;
+  max-width: 1920px;
+  background: #212121;
+  overflow-x: hidden;
+}
+
+button {
+  outline: none;
+  color: white;
+  border: 1px solid #212121;
+  cursor: pointer;
+  background: transparent;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+// .top-bg__image {
+//   position: absolute;
+//   top: 0;
+//   height: 900px;
+//   width: 100%;
+//   z-index: -999;
+//   object-fit: cover;
+//   opacity: 0.3;
+//   mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), transparent);
+// }

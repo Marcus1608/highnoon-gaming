@@ -1,0 +1,338 @@
+$custom-red: #dd163b;
+$custom-blue: #1e81d2;
+
+.nav-container {
+  position: absolute;
+  height: 120px;
+  width: 100%;
+}
+
+// top navbar
+.top-navbar {
+  position: absolute;
+  top: 0;
+  height: 40%;
+  width: 100%;
+
+  .logo-section {
+    position: absolute;
+    left: 0;
+    width: 15%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+// bottom navbar
+.bottom-navbar {
+  position: absolute;
+  bottom: 0;
+  height: 60%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+
+  // ul large
+  .ul-lg {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    width: 60%;
+
+    .mainLink {
+      width: 140px;
+      height: 72px;
+      background: transparent;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 10px;
+      z-index: 10;
+      transform: skew(-30deg);
+    }
+
+    .activeLink {
+      background: $custom-red;
+    }
+
+    li {
+      position: relative;
+      transition: 0.4s all ease-in-out;
+      transform: skew(30deg) !important;
+
+      .fas {
+        position: relative;
+        top: 1px;
+        right: 4px;
+      }
+
+      // events dropdwon
+      .dropdown-list {
+        display: none;
+      }
+
+      .show-dropdown-list {
+        position: absolute;
+        left: -60px;
+        height: 310px;
+        width: 200px;
+        background: transparent;
+        display: flex;
+        flex-flow: column;
+        margin-top: 45px;
+        border-bottom: 4px solid $custom-red;
+        display: inline-block;
+        z-index: 999;
+
+        .li-bg {
+          height: 300px;
+          width: 100%;
+          position: absolute;
+          bottom: 0;
+          background: rgba(0, 0, 0, 0.7);
+          text-align: center;
+
+          &--link {
+            height: 300px;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            text-align: center;
+
+            & > .dropdown-content {
+              position: relative;
+              top: 15px;
+              margin: 20px 0;
+              transform: skew(0deg) !important;
+              z-index: 1000;
+
+              &:hover {
+                color: $custom-red;
+              }
+            }
+          }
+        }
+      }
+
+      // standings dropdown
+      .standings {
+        position: absolute;
+        left: -40px !important;
+      }
+
+      // community
+      .customPos-arrow {
+        position: relative;
+        left: 4px;
+      }
+    }
+    // end ul
+  }
+
+  // hamburger menu
+  .hamburger-menu {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 25px;
+    width: 40px;
+    height: 8px;
+    border-radius: 1px;
+    background: white;
+    cursor: pointer;
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      width: 40px;
+      height: 8px;
+      border-radius: 1px;
+      background: white;
+    }
+
+    &:before {
+      top: 9px;
+    }
+
+    &:after {
+      bottom: 9px;
+    }
+
+    // hamburger exit / animation
+    &.exit {
+      position: absolute;
+      left: -100px;
+      z-index: 1000;
+      animation-delay: 5s;
+
+      &:before,
+      &:after {
+        content: '';
+        position: absolute;
+        width: 40px;
+        height: 8px;
+        border-radius: 1px;
+        background: white;
+        left: 125px;
+      }
+
+      &:before {
+        top: 1px;
+        transform: rotate(45deg);
+
+        animation: rotate 0.3s linear;
+        @keyframes rotate {
+          0% {
+            transform: rotate(0deg);
+          }
+          100% {
+            top: 1px;
+            transform: rotate(45deg);
+          }
+        }
+      }
+
+      &:after {
+        bottom: -1px;
+        transform: rotate(-45deg);
+
+        animation: rotate2 0.3s linear;
+        @keyframes rotate2 {
+          0% {
+            transform: rotate(0deg);
+          }
+          100% {
+            bottom: -1px;
+            transform: rotate(-45deg);
+          }
+        }
+      }
+    }
+  }
+
+  // bottom nav right
+  .account-search {
+    position: absolute;
+    height: 100%;
+    right: 30px;
+    display: flex;
+    align-items: center;
+
+    .login,
+    .signup {
+      position: relative;
+      right: 30px;
+      transition: 300ms all ease-in-out;
+
+      &:hover {
+        color: $custom-red;
+      }
+    }
+
+    .slash {
+      position: relative;
+      right: 30px;
+    }
+
+    .fa-search {
+      cursor: pointer;
+    }
+  }
+}
+
+// searchbar
+.search {
+  outline: none;
+  height: 45px;
+  width: 100%;
+  position: absolute;
+  transition: 0.5s all ease-in-out;
+  transform-origin: 100% top;
+  transform: scaleY(0);
+  z-index: 999;
+  top: 120px;
+}
+
+.showSearch {
+  outline: none;
+  height: 45px;
+  width: 1920px;
+  position: absolute;
+  transition: 0.5s all ease-in-out;
+  transform-origin: 100% top;
+  transform: scaleY(1);
+  z-index: 999;
+  top: 120px;
+}
+
+// nav menu
+.nav-menu {
+  position: absolute;
+  left: 0;
+  height: 100vh;
+  width: 30%;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 999;
+
+  &.hide {
+    // display: none;
+    left: -30%;
+  }
+
+  &--ul {
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+
+    border-bottom: 4px solid $custom-red;
+
+    li {
+      height: 50px;
+      margin: 10px 0;
+      color: $custom-red;
+      cursor: pointer;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      font-size: 18px;
+      text-transform: uppercase;
+
+      .open-menu {
+        top: 0;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        left: 100%;
+        background: rgba(0, 0, 0, 0.9);
+        text-align: center;
+
+        border-bottom: 4px solid $custom-red;
+
+        &.hide {
+          display: none;
+        }
+
+        li {
+          border: none;
+          display: flex;
+          flex-flow: column;
+          justify-content: center;
+          align-items: center;
+
+          z-index: 1000;
+        }
+      }
+    }
+  }
+}
+
+@import './Responsive.scss';
